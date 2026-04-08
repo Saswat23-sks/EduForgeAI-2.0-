@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "A user of the EduForge application.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "The unique Firebase Auth ID." },
+        "name": { "type": "string", "description": "The user's display name." },
+        "email": { "type": "string", "description": "The user's email address." },
+        "createdAt": { "type": "string", "format": "date-time", "description": "When the user registered." }
+      },
+      "required": ["uid", "name", "email", "createdAt"]
+    },
+    "Course": {
+      "title": "Course",
+      "description": "A generated course package.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string", "description": "The owner of the course." },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "data": { "type": "object", "description": "The full course JSON structure." },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "userId", "title", "data", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profile information."
+    },
+    "/courses/{courseId}": {
+      "schema": "Course",
+      "description": "Stored course packages."
+    }
+  }
+}

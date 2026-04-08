@@ -1,0 +1,5 @@
+{
+  "name": "EduForge AI",
+  "description": "AI-powered course creation assistant that generates structured, pedagogically-aligned lecture outlines, assignments, and quizzes from raw syllabi.",
+  "requestFramePermissions": []
+}
