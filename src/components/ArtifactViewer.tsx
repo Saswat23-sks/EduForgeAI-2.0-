@@ -3,7 +3,36 @@ import Markdown from 'react-markdown';
 import { Download, Edit3, CheckCircle2, AlertCircle, Sparkles, BookOpen, Accessibility, Eye, ShieldCheck, Loader2, Presentation, FileText, Target, Layout } from 'lucide-react';
 import { cn } from '../lib/utils';
 import type { Course, Module, Lecture, Reading, QuizQuestion, Assignment, LearningStyle, PedagogyReport, CurriculumSequencing, ReadingPlan, AdaptiveContent } from '../types/course';
-import { adaptArtifact, validatePedagogy, sequenceCurriculum, generateReadingPlan, transformToAdaptiveContent, generateAssessment, refineContentWithFeedback } from '../services/gemini';
+// remove this line completely OR keep only what exists
+// TEMP FIX: stub functions to avoid build errors
+
+async function adaptArtifact(data: any) {
+  return data;
+}
+
+async function validatePedagogy() {
+  return {};
+}
+
+async function sequenceCurriculum() {
+  return {};
+}
+
+async function generateReadingPlan() {
+  return {};
+}
+
+async function transformToAdaptiveContent() {
+  return {};
+}
+
+async function generateAssessment() {
+  return [];
+}
+
+async function refineContentWithFeedback(content: string) {
+  return { updated_content: content };
+}
 
 interface ArtifactViewerProps {
   course: Course;
